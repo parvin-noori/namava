@@ -1,0 +1,24 @@
+.inner-page-body {
+  background-color: rgb(242, 242, 242);
+  color: #000;
+}
+.termsAConditions-content{
+  margin-bottom: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  p{
+    line-height: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-page-body {
+    background-color: rgb(255, 255, 255);
+  }
+}
+@media (min-width: 768px) {
+  .termsAConditions-content{
+    padding: 5rem 3rem;
+    box-shadow: 0 3px 6px 0 rgba(0 ,0, 0 , 0.16);
+  }
+}

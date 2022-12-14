@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>نماوا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="title">
+    <meta property="og:url" content="description">
+    <meta property="og:image" content="image address">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--            <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/iconfont.css">
+    <link rel="stylesheet" href="assets/css/poppins.css">
+    <link rel="stylesheet" href="assets/css/iranYekan.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <!--            <link rel="stylesheet" href="rtl.css">-->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+</head>
+<body>
+<!-- start header-->
+<header class="py-4 ">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="header-menu d-flex align-items-center">
+                <button class="btn hamburger-menu__button d-xl-none d-inline-block me-3" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-start py-4" id="hamburger-menu">
+                    <div class="offcanvas-header justify-content-start">
+
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="#" class="logo me-3">
+                            <img src="assets/imgs/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="nav px-0 flex-column responsive-main-menu">
+                            <li><a href="#" class="active-item">
+                                <img src="assets/imgs/home.svg" alt="" class="me-3">
+                                home
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/movie-icon.svg" alt="" class="me-3">
+                                movies
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/series-icon.svg" alt="" class="me-3">
+                                series
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/category.svg" alt="" class="me-3">
+                                category
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/latest.svg" alt="" class="me-3">
+                                The latest
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/children.svg" alt="" class="me-3">
+                                children
+                            </a></li>
+                            <li><a href="#">
+                                <img src="assets/imgs/namava-mag.svg" alt="" class="me-3">
+                                namava mag
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="logo me-3">
+                    <img src="assets/imgs/logo.svg" alt="">
+                </a>
+                <ul class="nav px-0 main-menu d-xl-flex d-none">
+                    <li><a href="#" class="active-item">home</a></li>
+                    <li><a href="#">movies</a></li>
+                    <li><a href="#">series</a></li>
+                    <li><a href="#">categories</a></li>
+                    <li><a href="#">The latest</a></li>
+                    <li><a href="#">children</a></li>
+                    <li><a href="#">namava mag</a></li>
+                </ul>
+            </div>
+            <div class="header-buttons d-flex align-items-center">
+                <button class="btn search-btn me-md-4 me-1">
+                    <img src="assets/imgs/seach-icon.svg" alt="">
+                </button>
+                <a href="#" class="subscription-purchase me-md-4 me-1">
+                    خرید اشتراک
+                </a>
+                <button class="btn login-btn d-md-inline-block d-none">
+                    login/register
+                </button>
+                <button class="btn login-button-icon d-md-none d-inline-block">
+                    <img src="assets/imgs/log-out-icon.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--start search holder-->
+<div class="search-holder d-none">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-11 col-9">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class=" btn " id="basic-addon1">
+                            <img src="assets/imgs/seach-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="فیلم، سریال، بازیگر و ژانر"
+                           aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-md-1 col-3">
+                <button class="btn close-btn-search-holder w-100">
+                    <i class="feather icon-x me-2"></i>
+                    بستن
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-auto">
+                <button class="btn filter-button me-3">filter
+                    <i class="feather icon-chevron-down"></i>
+                </button>
+                <button href="#" class="btn filter-label me-3">
+                    اسکار
+                    <i class="feather icon-x ms-2"></i>
+                </button>
+                <button href="#" class="btn filter-label me-3">
+                    تاریخی
+                    <i class="feather icon-x ms-2"></i>
+                </button>
+                <button class="btn remove-btn-filters me-3">حذف همه فیلترها</button>
+            </div>
+            <div class="col-12">
+                <div class="filters mt-4 mb-5 d-none">
+                    <div class="row d-flex">
+                        <div class="col-md-2 col-4 pe-0">
+                            <ul class="nav flex-column h-100 nav-pills filters-pills-tab" id="v-pills-tab"
+                                role="tablist"
+                                aria-orientation="vertical">
+                                <li class="nav-item">
+                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-genre" role="tab" aria-controls="v-pills-genre"
+                                            aria-selected="true">ژانرها
+                                    </button>
+
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="v-pills-country-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-country" role="tab" aria-controls="v-pills-country"
+                                            aria-selected="false">کشور سازنده
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="v-pills-subtitle-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-subtitle" role="tab"
+                                            aria-controls="v-pills-subtitle"
+                                            aria-selected="false">صدا و زیرنویس
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="v-pills-year-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-year" role="tab" aria-controls="v-pills-year"
+                                            aria-selected="false">سال ساخت
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="v-pills-ordering-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-ordering" role="tab"
+                                            aria-controls="v-pills-ordering"
+                                            aria-selected="false">مرتب سازی
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10 col-8 ps-0">
+                            <div class="tab-content filter-pills-tabContent py-4 ps-4 h-100" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-genre" role="tabpanel"
+                                     aria-labelledby="v-pills-genre-tab">
+                                    <form action="">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="social">
+                                            <label class="form-check-label" for="social">
+                                                اجتماعی
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="theBest">
+                                            <label class="form-check-label" for="theBest">
+                                                برترین ها
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="war">
+                                            <label class="form-check-label" for="war">
+                                                جنگی
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="romantic">
+                                            <label class="form-check-label" for="romantic">
+                                                عاشقانه
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="documentary">
+                                            <label class="form-check-label" for="documentary">
+                                                مستند
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="classic">
+                                            <label class="form-check-label" for="classic">
+                                                کلاسیک
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="social2">
+                                            <label class="form-check-label" for="social2">
+                                                2 اجتماعی
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="theBest2">
+                                            <label class="form-check-label" for="theBest2">
+                                                برترین ها2
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="war2">
+                                            <label class="form-check-label" for="war2">
+                                                جنگی2
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="romantic2">
+                                            <label class="form-check-label" for="romantic2">
+                                                عاشقانه2
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="documentary2">
+                                            <label class="form-check-label" for="documentary2">
+                                                مستند2
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="classic2">
+                                            <label class="form-check-label" for="classic2">
+                                                کلاسیک2
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-country" role="tabpanel"
+                                     aria-labelledby="v-pills-country-tab">
+                                    <form action="">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="iran">
+                                            <label class="form-check-label" for="iran">
+                                                ایران
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="turkey">
+                                            <label class="form-check-label" for="turkey">
+                                                ترکیه
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="canada">
+                                            <label class="form-check-label" for="canada">
+                                                کانادا
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-subtitle" role="tabpanel"
+                                     aria-labelledby="v-pills-subtitle-tab">
+                                    <form action="">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="persian">
+                                            <label class="form-check-label" for="persian">
+                                                perisan
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="english">
+                                            <label class="form-check-label" for="english">
+                                                english
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                   id="persian-subtitle">
+                                            <label class="form-check-label" for="persian-subtitle">
+                                                persian subtitle
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade h-100" id="v-pills-year" role="tabpanel"
+                                     aria-labelledby="v-pills-year-tab">
+                                    <div class="row justify-content-center h-100 align-items-center flex-column">
+                                        <div class="col-8">
+                                            <div class="price-range-slider">
+                                                <div id="slider-range" class="range-bar"></div>
+                                                <p class="range-value d-flex align-items-center justify-content-between mt-4">
+                                                    <span type="text" id="min-price" readonly></span>
+                                                    <span type="text" id="max-price" readonly></span>
+                                                </p>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-ordering" role="tabpanel"
+                                     aria-labelledby="v-pills-ordering-tab">
+                                    <form action="">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="default" value="option1" checked>
+                                            <label class="form-check-label" for="default">
+                                                پیش فرض
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="latest" value="option2">
+                                            <label class="form-check-label" for="latest">
+                                                تازه های نماوا
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="rate"
+                                                   value="option3">
+                                            <label class="form-check-label" for="rate">
+                                                امتیاز IMDB
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="year"
+                                                   value="option3">
+                                            <label class="form-check-label" for="year">
+                                                سال ساخت
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-results">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <ul class="nav px-0 d-flex align-items-center justify-content-between">
+                        <li><a href="#" class="active-item">همه</a></li>
+                        <li><a href="#">فیلم</a></li>
+                        <li><a href="#">سریال</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-2 col-sm-3 col-4">
+                    <a href="#" class="linkWrapper">
+                        <div class="slider-img-holder">
+                            <img src="assets/imgs/d2a58257-5f97-452e-90c2-d87c52fed14e.jpg" alt="">
+                            <div class="slider-img-holder-hover-info">
+                                <div class="hover-info-wrapper">
+                                <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                    <div class="info-like d-flex align-items-center">
+                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                        <span>92%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-slider-title">
+                                   mehmuni
+                               </span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-4">
+                    <a href="#" class="linkWrapper">
+                        <div class="slider-img-holder">
+                            <img src="assets/imgs/3ce85794-7184-4a1d-aac7-6b68fda9599d.jpg" alt="">
+                            <div class="slider-img-holder-hover-info">
+                                <div class="hover-info-wrapper">
+                                <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                    <div class="info-like d-flex align-items-center">
+                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                        <span>92%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-slider-title">
+                                  nobate leyli
+                               </span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-3 col-4">
+                    <div class="slide-holder active-slide">
+                        <a href="#" class="linkWrapper">
+                            <div class="slider-img-holder">
+                                <img src="assets/imgs/57441ace-8a71-4744-bf38-671882d4d11f.jpg" alt="">
+                                <div class="slider-img-holder-hover-info">
+                                    <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                        <div class="info-like d-flex align-items-center">
+                                            <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                            <span>92%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="swiper-slider-title">
+                               khatoon
+                               </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-0 d-lg-inline-block d-none">
+            <div class="previewWrapper">
+                <div class="preview-img-wrapper">
+                    <img src="assets/imgs/khatoon-banner.jpg" alt="">
+                </div>
+                <div class="preview-content">
+                    <div class="swiper-slide__slide--vertical-content">
+                        <h2 class="swiper-slide-title">khatoon</h2>
+                        <div class="d-flex align-items-center description ">
+                            <span class="AgeLimitation-number me-4">+12</span>
+                            <span class="me-4">1400</span>
+                            <div class="d-flex align-items-center">
+                                <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                <span>92%</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="description">
+                                داستان زنی از زنان این سرزمین که روزی روزگاری در ایران برای زندگی جنگیده‌اند...
+                                <br>
+                                پربازدید ترین سال ۱۴۰۰ نماوا
+
+                            </p>
+                        </a>
+                        <div class="d-flex align-items-center episodes-buttons">
+                            <button class="btn episodes-button me-4">episodes</button>
+                            <a href="#" class="more-details-btn">
+                                <img src="assets/imgs/more-details.svg" alt="" class="m-0">
+                                <span>more details</span>
+                            </a>
+                        </div>
+                        <div class="series-stars d-flex align-items-center">
+                            <span class="me-2">ستارگان:</span>
+                            <ul class="nav px-0 stars-menu">
+                                <li><a href="#">ایرج طهماسب</a></li>
+                                <li><a href="#">هوتن شکیبا</a></li>
+                                <li><a href="#">کاظم سیاحی</a></li>
+                            </ul>
+                        </div>
+                        <div class="series-director d-flex align-items-center">
+                            <span class="me-2">کارگردان:</span>
+                            <a href="#">ایرج طهماسب</a>
+                        </div>
+                        <div class="series-genre d-flex align-items-center">
+                            <span class="me-2">دسته بندی:</span>
+                            <ul class="nav px-0">
+                                <li><a href="#">کمدی</a></li>
+                                <li><a href="#">تاک شو</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="without-search py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 col-8 d-flex align-items-center flex-column text-center">
+                        <img src="assets/imgs/search-results.svg" alt="" class="mb-5">
+                        <p>
+                            عنوان فیلم، سریال یا بازیگر مورد نظر خود را جستجو کنید و یا از طریق فیلترهای موجود، فیلم و
+                            سریال
+                            مورد
+                            علاقه خود را پیدا کنید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <!--start slider-->
+    <section class="slider">
+        <!-- Swiper -->
+        <div class="swiper mySwiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-holder">
+                        <div class="swiper-img-holder">
+                            <img src="assets/imgs/mehmuni-banner.jpg" alt="" title="" class="d-sm-inline-block d-none">
+                            <img src="assets/imgs/09cf048d-58d5-4714-bfc6-a48fea711f33.jpg" alt="" title=""
+                                 class="d-sm-none d-inline-block">
+                        </div>
+                        <div class="swiper-slide__slide--vertical-content">
+                            <a href="#">
+                                <img src="assets/imgs/mehmuni.png" alt="">
+                            </a>
+                            <a href="#">
+                                <h2 class="swiper-slide-title">mehmuni</h2>
+                            </a>
+                            <div class="d-flex episodes-buttons">
+                                <button class="btn episodes-button me-4">episodes</button>
+                                <button class="btn review-button">review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-holder">
+                        <div class="swiper-img-holder">
+                            <video id="video2" class="t-movieSlider-0-1-199 d-sm-inline-block d-none muted"
+                                   playsinline=""
+                                   preload="auto"
+                                   poster="assets/imgs/0ae9329f-93a3-49d8-9eb1-fd044c9363d9.jpg" muted>
+                                <source type="video/mp4"
+                                        src="assets/video/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4">
+                            </video>
+                            <video id="video" class="t-movieSlider-0-1-252 d-sm-none d-inline-block muted"
+                                   playsinline=""
+                                   preload="auto"
+                                   poster="assets/imgs/5488183b-d252-4e65-b54c-f82c2505f11b.jpg" muted>
+                                <source type="video/mp4"
+                                        src="assets/video/a48ea6ae-c1f9-47aa-a7fd-19591c187b3d.mp4">
+                            </video>
+                        </div>
+                        <div class="swiper-slide__slide--vertical-content">
+                            <a href="#">
+                                <img src="assets/imgs/bears-logo.png" alt="">
+                            </a>
+                            <a href="#">
+                                <h2 class="swiper-slide-title">we are little bears</h2>
+                            </a>
+                            <div class="d-flex episodes-buttons align-items-center">
+                                <button class="btn episodes-button me-4">episodes</button>
+                                <button class="btn review-button">review</button>
+                                <button class=" btn mute-btn" type="button">
+                                    <img src="assets/imgs/volume-off.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-holder">
+                        <div class="swiper-img-holder">
+                            <img src="assets/imgs/khosouf-banner.jpg" alt="" title="" class="d-sm-inline-block d-none">
+                            <img src="assets/imgs/9c76ce67-fd0b-47d2-985b-5fb809206aea.jpg" alt="" title=""
+                                 class="d-sm-none d-inline-block">
+                        </div>
+                        <div class="swiper-slide__slide--vertical-content">
+                            <a href="#">
+                                <img src="assets/imgs/khosouf-logo.png" alt="">
+                            </a>
+                            <a href="#">
+                                <h2 class="swiper-slide-title">khosouf</h2>
+                            </a>
+                            <div class="d-flex episodes-buttons">
+                                <button class="btn episodes-button me-4">episodes</button>
+                                <button class="btn review-button">review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-button-next1 d-sm-inline-block d-none"></div>
+            <div class="swiper-button-prev swiper-button-prev1 d-sm-inline-block d-none"></div>
+            <div class="swiper-pagination swiper-pagination1 d-sm-none d-inline-block"></div>
+        </div>
+    </section>
+
+    <!--start series slider-->
+    <div class="series ">
+        <div class="container">
+            <div class="slider-title">
+                <a href="#"
+                   class="slider-title-link d-flex align-items-center justify-content-lg-start justify-content-between">
+                    <h3 class=" me-4 ps-3">سریال ها تخصصی نماوا</h3>
+                    <div class="d-flex align-items-center see-more-link">
+                        <span class="me-2">مشاهده همه </span>
+                        <i class="feather icon-chevron-right"></i>
+                    </div>
+                </a>
+                <span class="slider-title__description">Trailers for upcoming releases</span>
+            </div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 ">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-holder active-slide">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/d2a58257-5f97-452e-90c2-d87c52fed14e.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                                   mehmuni
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/3ce85794-7184-4a1d-aac7-6b68fda9599d.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                                  nobate leyli
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/9c2b1d49-be38-4cc1-b84f-23defc26bee9.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                                motargem
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/57441ace-8a71-4744-bf38-671882d4d11f.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                               khatoon
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/270dda56-3c7f-48f2-bd9e-e3d79d3c407e.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                               khosouf
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/3043f20e-001d-4aab-a7f0-5c484ef09950.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                              herfeyi
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/2a7be2ed-bddc-45f2-9f58-ab09ab54911e.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                             balva
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/d1b97a52-7b5f-4e4c-a920-0030d8f69c9f.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                             zanan
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/4848115b-3f26-478c-a65a-c2eb170312a4.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                            ghourbaghe
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/2d8c26b1-d3d5-4a17-beb6-898c1610e69c.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                         haft khan
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/9f22905b-f01d-4a43-a124-67c7ebe7df0e.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                     siavash
+                               </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/0063457f-7e2d-47e1-8838-3468d3a805e5.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">gisoo</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/c78164bc-d1af-406c-a2db-74a74af1f161.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">ham rafigh</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/8f40d44f-3675-4e5b-9915-51e821ca5c07.jpg" alt="">
+                                            <div class="slider-img-holder-hover-info">
+                                                <div class="hover-info-wrapper">
+                                             <span class="info-type d-block">
+                                    series - 1400
+                                </span>
+                                                    <div class="info-like d-flex align-items-center">
+                                                        <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                                        <span>92%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="swiper-slider-title">pishgoo</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next2"></div>
+                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 px-0 d-lg-inline-block d-none">
+            <div class="previewWrapper">
+                <div class="preview-img-wrapper">
+                    <img src="assets/imgs/mehmuni-banner.jpg" alt="">
+                </div>
+                <div class="preview-content">
+                    <div class="swiper-slide__slide--vertical-content">
+                        <h2 class="swiper-slide-title">mehmuni</h2>
+                        <div class="d-flex align-items-center description ">
+                            <span class="AgeLimitation-number me-4">+12</span>
+                            <span class="me-4">1400</span>
+                            <div class="d-flex align-items-center">
+                                <img src="assets/imgs/heart.svg" alt="" class="me-2">
+                                <span>92%</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="description">
+                                در همسایگی خانه جدید آقای طهماسب که به تازگی به آن نقل مکان کرده، یک سالن عروسی قرار
+                                دارد.
+                                بنابراین شخصیت های عروسکی جدیدی که اکثر آن ها کارکنان این سالن عروسی هستند به زندگی او
+                                اضافه
+                                شده و اتفاق های جذابی را رقم می زنند.
+                                <br>
+                                پخش اختصاصی سریال مهمونی، پنج شنبه ها ساعت ۲۰ در نماوا
+
+                            </p>
+                        </a>
+                        <div class="d-flex align-items-center episodes-buttons">
+                            <button class="btn episodes-button me-4">episodes</button>
+                            <a href="#" class="more-details-btn">
+                                <img src="assets/imgs/more-details.svg" alt="" class="m-0">
+                                <span>more details</span>
+                            </a>
+                        </div>
+                        <div class="series-stars d-flex align-items-center">
+                            <span class="me-2">ستارگان:</span>
+                            <ul class="nav px-0 stars-menu">
+                                <li><a href="#">ایرج طهماسب</a></li>
+                                <li><a href="#">هوتن شکیبا</a></li>
+                                <li><a href="#">کاظم سیاحی</a></li>
+                            </ul>
+                        </div>
+                        <div class="series-director d-flex align-items-center">
+                            <span class="me-2">کارگردان:</span>
+                            <a href="#">ایرج طهماسب</a>
+                        </div>
+                        <div class="series-genre d-flex align-items-center">
+                            <span class="me-2">دسته بندی:</span>
+                            <ul class="nav px-0">
+                                <li><a href="#">کمدی</a></li>
+                                <li><a href="#">تاک شو</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start subtitle-->
+    <div class="series ">
+        <div class="container">
+            <div class="slider-title">
+                <a href="#"
+                   class="slider-title-link d-flex align-items-center justify-content-lg-start justify-content-between">
+                    <h3 class=" me-4 ps-3">سریال ها تخصصی نماوا</h3>
+                    <div class="d-flex align-items-center see-more-link">
+                        <span class="me-2">مشاهده همه </span>
+                        <i class="feather icon-chevron-right"></i>
+                    </div>
+                </a>
+                <span class="slider-title__description">Trailers for upcoming releases</span>
+            </div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 ">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-holder">
+                                    <a href="#" class="linkWrapper">
+                                        <div class="slider-img-holder">
+                                            <img src="assets/imgs/d2a58257-5f97-452e-90c2-d87c52fed14e.jpg" alt="">
+                                            <span class="slider-img-holder-label">
+                                                زیرنویس چسبیده
+                                            </span>
+                                        </div>
+                                        <span class="swiper-slider-title">
+                                            mehmuni
+                                            <span class="swiper-slider-description mt-2">5 episodes</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next2"></div>
+                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start coming soon slider-->
+    <div class="coming-soon ">
+        <div class="container">
+            <div class="slider-title">
+                <a href="#"
+                   class="slider-title-link d-flex align-items-center justify-content-lg-start justify-content-between">
+                    <h3 class=" me-4 ps-3">به زودی</h3>
+                    <div class="d-flex align-items-center see-more-link">
+                        <span class="me-2">مشاهده همه </span>
+                        <i class="feather icon-chevron-right"></i>
+                    </div>
+                </a>
+                <span class="slider-title__description">Trailers for upcoming releases</span>
+            </div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/0ae9329f-93a3-49d8-9eb1-fd044c9363d9.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/999b1734-685a-41c5-b4e3-722184437196.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/a8346419-8de0-43c9-8595-e9c1778e0bb3.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/0ae9329f-93a3-49d8-9eb1-fd044c9363d9.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/999b1734-685a-41c5-b4e3-722184437196.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/a8346419-8de0-43c9-8595-e9c1778e0bb3.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/0ae9329f-93a3-49d8-9eb1-fd044c9363d9.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/f4009d03-fc56-4ad0-a0fb-e49f51f6a549.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="video-holder">
+                                    <video class="t-movieSlider-0-1-252  muted" playsinline=""
+                                           preload="auto"
+                                           poster="assets/imgs/999b1734-685a-41c5-b4e3-722184437196.jpg" muted>
+                                        <source type="video/mp4"
+                                                src="assets/video/a8346419-8de0-43c9-8595-e9c1778e0bb3.mp4">
+                                    </video>
+                                    <div class="d-flex video-holder__control align-items-center">
+                                        <i class="feather icon-play-circle me-3"></i>
+                                        <span class="video-time"></span>
+                                    </div>
+                                </a>
+                                <div class="d-flex flex-column mt-5">
+                                    <a href="#" class="published-date">apr 22</a>
+                                    <a href="#" class="swiper-slider-title">we are little bears</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next3"></div>
+                    <div class="swiper-button-prev swiper-button-prev3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start top news-->
+    <div class="top-news">
+        <div class="container">
+            <div class="slider-title">
+                <a href="#"
+                   class="slider-title-link d-flex align-items-center justify-content-lg-start justify-content-between">
+                    <h3 class=" me-4 ps-3">top news</h3>
+                    <div class="d-flex align-items-center see-more-link">
+                        <span class="me-2">مشاهده همه </span>
+                        <i class="feather icon-chevron-right"></i>
+                    </div>
+                </a>
+                <span class="slider-title__description">Trailers for upcoming releases</span>
+            </div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX180_CR0,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>‘The Witcher’ Family Reunites as Filming Begins on Season 3 (Photo)</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 4</span>
+                                            <span class="source ms-3">the wrap</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BYzM1MDA5NjEtMjE4Zi00OTQwLTk1MjEtOTIxM2IxNjkxOTE2XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_QL75_UY266_CR146,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>MipTV News Roundup: Beyond Rights, Insight TV Forge New Branded Block</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 5</span>
+                                            <span class="source ms-3">Variety - TV News</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX180_CR0,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>‘The Witcher’ Family Reunites as Filming Begins on Season 3 (Photo)</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 4</span>
+                                            <span class="source ms-3">the wrap</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BYzM1MDA5NjEtMjE4Zi00OTQwLTk1MjEtOTIxM2IxNjkxOTE2XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_QL75_UY266_CR146,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>MipTV News Roundup: Beyond Rights, Insight TV Forge New Branded Block</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 5</span>
+                                            <span class="source ms-3">Variety - TV News</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX180_CR0,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>‘The Witcher’ Family Reunites as Filming Begins on Season 3 (Photo)</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 4</span>
+                                            <span class="source ms-3">the wrap</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BYzM1MDA5NjEtMjE4Zi00OTQwLTk1MjEtOTIxM2IxNjkxOTE2XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_QL75_UY266_CR146,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>MipTV News Roundup: Beyond Rights, Insight TV Forge New Branded Block</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 5</span>
+                                            <span class="source ms-3">Variety - TV News</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX180_CR0,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>‘The Witcher’ Family Reunites as Filming Begins on Season 3 (Photo)</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 4</span>
+                                            <span class="source ms-3">the wrap</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="d-flex top-news__item">
+                                    <img src="assets/imgs/MV5BYzM1MDA5NjEtMjE4Zi00OTQwLTk1MjEtOTIxM2IxNjkxOTE2XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_QL75_UY266_CR146,0,180,266_.jpg"
+                                         alt="">
+                                    <div class="news-description ps-4">
+                                        <p>MipTV News Roundup: Beyond Rights, Insight TV Forge New Branded Block</p>
+                                        <div class="d-flex metadata">
+                                            <span class="publicationDate">apr 5</span>
+                                            <span class="source ms-3">Variety - TV News</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next4"></div>
+                    <div class="swiper-button-prev swiper-button-prev4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start directors-->
+    <div class="directors">
+        <div class="container">
+            <div class="slider-title">
+                <h3 class=" me-4 ps-3">کارگردانان</h3>
+                <span class="slider-title__description">People born on April 6</span>
+            </div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="linkWrapper">
+                                    <div class="slider-img-holder">
+                                        <img src="assets/imgs/53428533-8f9a-42b2-9894-892887734c66.jpg"
+                                             alt="جون هو بانگ"
+                                             title="جون هو بانگ">
+                                    </div>
+                                    <span class="swiper-slider-title">
+                                    جون هو بانگ
+                               </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="linkWrapper">
+                                    <div class="slider-img-holder">
+                                        <img src="assets/imgs/aecc1c40-775d-4c52-b2c4-0b402c74654f.jpg"
+                                             alt="مارتین اسکورسیزی" title="مارتین اسکورسیزی">
+                                    </div>
+                                    <span class="swiper-slider-title">
+                                    مارتین اسکورسیزی
+                               </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="linkWrapper">
+                                    <div class="slider-img-holder">
+                                        <img src="assets/imgs/e813ea37-9ae9-4223-8495-7356fe293a78.jpg"
+                                             alt="پل توماس اندرسون" title="پل توماس اندرسون">
+                                    </div>
+                                    <span class="swiper-slider-title">
+                                    پل توماس اندرسون
+                               </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next5"></div>
+                    <div class="swiper-button-prev swiper-button-prev5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--start social cell-->
+    <div class="social-cell">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <a href="#" title="telegram">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-3">
+                                <span class="icon_holder"><i class="fab fa-telegram-plane"></i></span>
+                            </div>
+                            <div class="col-9">
+                                <div class="text_holder d-flex flex-column align-items-center">
+                                    <div class="inner_text_holder">
+                                        <h5>عضویت در کانال تلگرام</h5>
+                                        <small>TELEGRAM CHANNEL</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 col-sm-6 col-12">
+                    <a href="#" title="telegram">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-3">
+                                <span class="icon_holder"><i class="fab fa-instagram"></i></span>
+                            </div>
+                            <div class="col-9">
+                                <div class="text_holder d-flex flex-column align-items-center">
+                                    <div class="inner_text_holder">
+                                        <h5>مشاهده در اینستگرام</h5>
+                                        <small>instagram page</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--start footer-->
+<div class="footer">
+    <div class="container">
+        <div class="footer-page-content-container">
+            <div class="footer-links">
+                <div class="footer-menu row">
+                    <div class="col-5">
+                        <ul class="nav px-0 flex-column">
+                            <li><a href="#">درباره نماوا</a></li>
+                            <li><a href="#">نماوا مگ</a></li>
+                            <li><a href="#">کارت هدیه</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                            <li><a href="#">اپلکیشن ها</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-5">
+                        <ul class="nav px-0 flex-column">
+                            <li><a href="#">تماس با ما</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                            <li><a href="#">خرید اشتراک</a></li>
+                            <li><a href="#">شرایط مصرف اینترنت</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-socials d-flex mb-3">
+                    <ul class="social-networks nav px-0">
+                        <li><a href="#" class="me-3"><img src="assets/imgs/telegram.svg" alt=""></a></li>
+                        <li><a href="#" class="me-3 instagram-icon"><img src="assets/imgs/instagram.svg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="assets/imgs/twitter.svg" alt=""></a></li>
+                    </ul>
+                    <ul class="Enamad nav px-0">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <p>خدمات ارایه شده در نماوا، دارای مجوز های لازم از مراجع مربوطه می باشد و هر گونه بهره برداری و سوء
+                        استفاده از محتوای نماوا، پیگرد قانونی دارد.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/input-range-slider.js"></script>
+</body>
+</html>

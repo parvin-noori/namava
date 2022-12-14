@@ -1,0 +1,16 @@
+@font-face {
+    src: url("../fonts/iranyekanweblight(fanum).ttf");
+    font-family: 'iranYekan';
+    font-weight: 300;
+}
+@font-face {
+    src: url("../fonts/iranyekanwebregular(fanum).ttf");
+    font-family: 'iranYekan';
+    font-weight: 400;
+}
+@font-face {
+    src: url("../fonts/iranyekanwebbold(fanum).ttf");
+    font-family: 'poppins';
+    font-weight: 700;
+}
+

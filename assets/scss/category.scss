@@ -1,0 +1,94 @@
+.categories {
+  margin-bottom: 5rem;
+
+  .category {
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.7rem;
+
+    img {
+      width: 100%;
+
+      object-fit: cover;
+    }
+
+    .category-title-holder {
+      top: 0;
+      z-index: 1;
+      color: #ffffff;
+      right: 0;
+      width: 55%;
+      bottom: 0;
+      height: 100%;
+      display: table;
+      position: absolute;
+      text-align: right;
+      line-height: 1.71;
+      text-shadow: 0 0 30px #000000;
+
+      .category-title {
+        white-space: nowrap;
+        display: table-cell;
+        padding-right: 24px;
+        vertical-align: middle;
+      }
+    }
+
+    &:after {
+      content: '';
+      top: 0;
+      z-index: 0;
+      right: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 499px) {
+  .category {
+    img {
+      height: 16rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+    img {
+      height: 10rem;
+    }
+  }
+}
+
+/* Purple */
+.category.purple {
+&:after{
+  background: linear-gradient(to left, #6e48aa 0%, #6e48aa 0%,transparent);
+
+}
+}
+
+/* Light Blue */
+.category.blue {
+  &:after {
+    background: linear-gradient(to left, #1fa2ff 0%,  #1fa2ff 0%,transparent);
+  }
+}
+
+/* Green */
+.category.green {
+  &:after {
+  background: linear-gradient(to left, #56ab2f 0%,#56ab2f 0%,transparent);
+  }
+}
+
+/* Tangerine */
+.category.orange {
+  &:after {
+  background: linear-gradient(to left, #db5041 0%,  #db5041 0%,transparent);
+  }
+}
